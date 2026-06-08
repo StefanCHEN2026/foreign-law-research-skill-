@@ -16,6 +16,47 @@ skills/
         └── 数据库索引.md            # 121个数据库索引，按法域归类
 ```
 
+## 安装与使用
+
+### Claude Code（原生支持）
+
+**方法一：克隆到项目 skills 目录**
+```bash
+cd 你的项目目录
+mkdir -p .claude/skills
+cd .claude/skills
+git clone https://github.com/StefanCHEN2026/foreign-law-research-skill-.git
+```
+
+**方法二：直接下载**
+```bash
+# 下载后解压到任意项目的 .claude/skills/ 目录下即可
+```
+
+安装后在 Claude Code 对话中包含以下关键词即可自动触发：
+- "域外法"、"外国法"、"海外法律"、"比较法"
+- "外国法律查明"、"域外法律研究"、"涉外法律"
+- "查明某国法律"、提及具体国家/地区法律问题
+
+### 其他 AI 工具
+
+| 工具 | 使用方式 |
+|------|----------|
+| **Cursor** | 复制 `SKILL.md` 到 `.cursor/rules/域外法查明.mdc` |
+| **Codex / OpenAI** | 将 `SKILL.md` 内容粘贴为 system prompt 或上传为 knowledge file |
+| **GitHub Copilot** | 提取关键流程写入 `.github/copilot-instructions.md` |
+| **其他工具** | 将六步法流程作为 custom instructions / system prompt 使用 |
+
+核心方法论与平台无关，`references/数据库索引.md` 可独立作为参考文档查阅。
+
+### 手动触发（任何平台）
+
+如果工具不支持自动加载，直接在对话开头粘贴以下指令：
+
+> 请按照域外法查明六步法流程：识别法域 → 识别法律渊源 → 识别具体法律法规 → 定位具体规则 → 质量审查 → 输出来源引用。
+
+---
+
 ## 功能概览
 
 | 步骤 | 内容 |
